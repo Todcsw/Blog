@@ -1,0 +1,52 @@
+#pagination {
+    overflow: hidden;
+    margin-top: 1rem;
+    width: 100%;
+}
+nav {
+    display: block;
+}
+#pagination .pagination {
+    text-align: center;
+    display: block;
+}
+.pagination a {
+    color: #99a9bf;
+    text-decoration: none;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: transparent;
+}
+#pagination .page-number.current {
+    background: #00c4b6;
+    color: #fff;
+    cursor: default;
+}
+#pagination .page-number {
+    display: inline-block;
+    margin: 0 0.2rem;
+    min-width: 1.2rem;
+    height: 1.2rem;
+    text-align: center;
+    line-height: 1.2rem;
+}
+.pageJump {
+    display: inline-block;
+    padding-left: 0;
+
+    margin: 0px 0px 0px 60px;
+    border-radius: 4px;
+    /*vertical-align: top;*/
+}
+.pageJump input {
+    width: 40px;
+}
+.pageJump .button ,.pageJump input  {
+    font-size: 16px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}

@@ -1,0 +1,31 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Blog:war exploded">
+    <output-path>$PROJECT_DIR$/../../../studyapp/apache-tomcat-9.0.27/webapps/blogs</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Blog/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Blog" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.25-bin" />
+          <element id="library" level="project" name="hutool-all-5.3.7" />
+          <element id="library" level="project" name="jackson-annotations-2.8.0" />
+          <element id="library" level="project" name="commonmark-0.8.0" />
+          <element id="library" level="project" name="spring-core-5.2.2.RELEASE" />
+          <element id="library" level="project" name="commonmark-ext-gfm-tables-0.8.0" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commonmark-0.8.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/hutool-all-5.3.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jackson-annotations-2.8.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-core-5.2.2.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commonmark-ext-gfm-tables-0.8.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.1.25-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/hutool-all-5.3.7-sources.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

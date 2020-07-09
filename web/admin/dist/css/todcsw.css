@@ -1,0 +1,92 @@
+
+.bb {
+    position: relative;
+    width: 94px;
+    height: 24px;
+    border: 1px solid #007bff;
+    /*background: url(http://demo.htmleaf.com/1505/201505221738/img/Button-White-Large.png) no-repeat 50%/70% rgba(0, 0, 0, 0.1);*/
+    color: #007bff;
+    box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
+    margin: 7px;
+}
+
+.bb::before,
+.bb::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.bb::before,
+.bb::after {
+    content: '';
+    z-index: 1;
+    margin: -5%;
+    box-shadow: inset 0 0 0 2px;
+    animation: clipMe 8s linear infinite;
+}
+
+.bb::before {
+    animation-delay: -4s;
+}
+
+@keyframes clipMe {
+
+    0%,
+    100% {
+        clip: rect(0px, 220.0px, 2px, 0px);
+    }
+
+    25% {
+        clip: rect(0px, 2px, 220.0px, 0px);
+    }
+
+    50% {
+        clip: rect(218.0px, 220.0px, 220.0px, 0px);
+    }
+
+    75% {
+        clip: rect(0px, 220.0px, 220.0px, 218.0px);
+    }
+}
+
+.bb1 {
+    position: relative;
+    width: 450px;
+    height: 300px;
+    /*background: #666666;*/
+    margin: 0 auto;
+    border: 1px solid #007bff;
+}
+
+.bb1:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: -10px;
+    right: -10px;
+    border-top: 2px solid #007bff;
+    border-right: 2px solid #007bff;
+    z-index: 10;
+    box-sizing: border-box;
+    clip: rect(0px, 200px, 100px, 100px);
+}
+
+.bb1:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -10px;
+    bottom: -10px;
+    border-left: 2px solid #007bff;
+    border-bottom: 2px solid #007bff;
+    z-index: 10;
+    box-sizing: border-box;
+    clip: rect(100px, 100px, 200px, 0px);
+}

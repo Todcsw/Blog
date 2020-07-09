@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/*------  Reset CSS ------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0; padding:0;} table{border-collapse:collapse; border-spacing:0;} fieldset,img{border:0;} address,caption,cite,code,dfn,em,strong,th,var{font-style:normal; font-weight:normal;} ol,ul{list-style:none;} caption,th{text-align:left;} h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;} q:before,q:after{content:'';} abbr,acronym{border:0;}
+body{font:normal 12px Helvetica, Arial, sans-serif; color:#464646;}
+
+/*-------- Homepage Styles -------*/
+html{height:100%;}
+body{background:#cf7114 url(../img/bg_body.png) left top repeat-x; text-align:center;height:100%;}
+#wrap{background:url(../img/bg_footprints.png) center 220px no-repeat;position:relative;width:100%;height:100%;}
+#header{background:url(../img/bg_top.png) left top repeat-x;padding-top:50px;}
+h2{font-size:30px; color:#fff; margin-top:20px; line-height:38px; margin-bottom:15px;}
+/*-------- General ---------*/
+a{outline:none; text-decoration:none;color:#fff;}
+a:hover{text-decoration:underline;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}  /* for IE/Mac */
+.clearfix{zoom:1;   /* triggers hasLayout */display:block;   /* resets display for IE/Win */}
+
+html .error_page{overflow:hidden;}
+.error_page #wrap{position:relative;}
+.error_page h2{height:60px;line-height:60px;margin:0 auto;font-size:48px;font-family:'华文行楷';color:#fff;}
+.error_page h2 a:hover{text-decoration:none;}
+.error_page h2#smash_page{background-position:-520px bottom;}
+.error_page h2#smash_server{background-position:-780px bottom;}
+.error_page h2 a{background:url(../img/smash_sprites02.png) no-repeat;display:block;height:100%;}
+.error_page h2 a:hover{background-position:-260px top;}
+#smash{width:100%;height:520px;overflow:hidden;position:fixed;margin:0 auto;bottom:0;left:0;}
+#smash img{display:block;}
+.skull{width:560px;margin:0 auto;background:#F00;position:relative;}
+.face, .eyes, .hilites, .pupils{position:absolute;}
+.face{top:0;left:0;}
+.eyes{background:#FFF;top:170px;left:200px;width:237px;height:117px;overflow:hidden;}
+.hilites{top:10px;left:17px;}
+.pupils{top:5px;left:17px;}
+.skull a{position:absolute;z-index:100;display:block;height:420px;width:540px;top:0;left:0;}
