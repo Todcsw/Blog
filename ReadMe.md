@@ -10,6 +10,7 @@
 
 5.关于引进评论,需要自己去https://leancloud.cn/dashboard/login.html#/signup 这里注册账号,然后创建实例,填写更改成自己的appid和appkey!数据库里面的appid和appkey可能会失效。
 
+6.演示视频:https://www.bilibili.com/video/BV1pt4y1Q7ZB 博主站点:http://www.todcsw.site/
 ## 项目运行效果图
 
 ### 登录页
