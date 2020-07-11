@@ -35,21 +35,13 @@ public class LoginServlet extends HttpServlet {
             String password = Base64.encode(request.getParameter("password"));
             HttpSession hs=request.getSession();
             boolean flag=true;
-            User user = userService.Login(name, password);
+            User user = userService.Login(name,password);
 
             if(user!=null){
-                flag=false;
-
-                if(user.getAccount().equals("admin")||user.getAccount().equals("1759864302@qq.com")){
+                    flag=false;
                     hs.setAttribute("user",user);
                     hs.setAttribute("tan","1");
                     response.sendRedirect("IndexServlet");
-                }else{
-                    System.out.println("123error");
-                    hs.setAttribute("errorMsg","该用户未经授权！请联系管理员 1759864302@qq.com");
-                    response.sendRedirect("login.jsp");
-                }
-
 
             }else{
                 hs.setAttribute("errorMsg","账号或密码不正确");

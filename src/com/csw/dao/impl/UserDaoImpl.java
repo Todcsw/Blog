@@ -51,7 +51,7 @@ public class UserDaoImpl implements UserDao {
         User user=null;
         String sql="select * from user where account=? and password=?";
         Object[] object=new Object[]{account,password};
-        ResultSet resultSet = DBUtil.executeQuery(sql, object);
+        ResultSet resultSet = DBUtil.executeQuery(sql,object);
         if(resultSet.next()){
             user=new User();
             user.setId(Integer.parseInt(resultSet.getString("id")));
@@ -105,7 +105,8 @@ public class UserDaoImpl implements UserDao {
             user1.setCreateTime(DateTime.of(resultSet.getString("createTime"),"yyyy-MM-dd HH:mm:ss"));
             user1.setIdentify(resultSet.getString("identify"));
         }
-
+        resultSet.close();
+        DBUtil.closeAll();
         return user1;
     }
 

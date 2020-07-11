@@ -28,9 +28,9 @@ CREATE TABLE `blog`  (
   `view` int(10) NOT NULL COMMENT '文章浏览量',
   `tags` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '博客标签，多个标签使用，分割开',
   `catalog` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '博客所属目录',
-  `uploadTime` datetime(0) NOT NULL COMMENT '上传时间(按照时间顺序取出博客)',
+  `uploadTime` datetime NOT NULL COMMENT '上传时间(按照时间顺序取出博客)',
   `content` mediumtext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '文章内容路径',
-  `updateTime` datetime(0) NOT NULL COMMENT '最后更改时间',
+  `updateTime` datetime NOT NULL COMMENT '最后更改时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '博客文章表' ROW_FORMAT = Compact;
 
@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category`  (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'id主键递增',
   `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '分类,采用,分割开显示出来',
-  `createTime` datetime(0) NOT NULL COMMENT '创建时间',
+  `createTime` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '目录表' ROW_FORMAT = Compact;
 
@@ -147,7 +147,7 @@ CREATE TABLE `link`  (
   `url` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '友情链接，写网址时提示必须填写的是https: 不加www.的网址',
   `name` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '友链名称',
   `introduce` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '友链介绍',
-  `create_time` datetime(0) NOT NULL COMMENT '添加时间',
+  `create_time` datetime NOT NULL COMMENT '添加时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '友情链接表' ROW_FORMAT = Compact;
 
@@ -203,7 +203,7 @@ CREATE TABLE `tag`  (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id主键',
   `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '标签名称',
   `deleted` int(10) NOT NULL COMMENT '是否被删除,0=否 1=是',
-  `createTime` datetime(0) NOT NULL COMMENT '创建时间',
+  `createTime` datetime NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`, `name`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '标签表' ROW_FORMAT = Compact;
 
@@ -224,7 +224,7 @@ CREATE TABLE `user`  (
   `password` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '登录后台管理密码',
   `problem` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '密保问题',
   `answer` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '密保答案',
-  `createTime` datetime(0) NULL DEFAULT NULL COMMENT '用户创建时间,也就是博客创建时间',
+  `createTime` datetime NULL DEFAULT NULL COMMENT '用户创建时间,也就是博客创建时间',
   `identify` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '身份',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '个人信息表' ROW_FORMAT = Compact;

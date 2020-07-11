@@ -26,7 +26,7 @@ public class DBUtil {
 			Class.forName("com.mysql.jdbc.Driver");
 			// 获取连接
 			conn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/blog_text?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8", "root", "485226");
+					"jdbc:mysql://120.78.178.218:3306/blog_test?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8", "root", "485226");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
