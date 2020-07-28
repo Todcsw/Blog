@@ -1,3 +1,5 @@
+# 技术栈
+jsp+servlet
 # 个人博客管理系统说明
 
 1.需要导入数据库文件sql/blog_db1.sql文件。
