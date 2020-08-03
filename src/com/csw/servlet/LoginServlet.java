@@ -42,7 +42,6 @@ public class LoginServlet extends HttpServlet {
                     hs.setAttribute("user",user);
                     hs.setAttribute("tan","1");
                     response.sendRedirect("IndexServlet");
-
             }else{
                 hs.setAttribute("errorMsg","账号或密码不正确");
                 response.sendRedirect("login.jsp");
