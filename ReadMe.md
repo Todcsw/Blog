@@ -59,15 +59,10 @@ jsp+servlet
 
 免责声明:所有开源代码仅适用于学习交流,请勿商用,为此构成的侵权行为本人不负任何责任.
 
-侵删。群聊:617310699  作者邮箱:1759864302@qq.com
+侵删。
 
 Blog 还有一些不完善的地方，鄙人才疏学浅，望见谅；
 
-开源不易,可以请作者喝杯奶茶！
-
-![](http://www.todcsw.site/img/wechat.jpg)
-
-![](http://www.todcsw.site/img/alipay.jpg)
 
 
 
